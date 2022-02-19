@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "cloneuber",
+    "slug": "cloneuber",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "cloneuber"
+}
