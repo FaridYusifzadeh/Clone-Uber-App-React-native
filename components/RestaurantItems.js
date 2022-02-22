@@ -35,17 +35,20 @@ export const localRestaurants = [
 export default function RestaurantItems({ navigation, ...props }) {
   return (
     <>
-      <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
-        {localRestaurants.map((resturant, index) => (
+      {props.restaurantData.map((restaurant, index) => (
+        <TouchableOpacity
+          key={index}
+          activeOpacity={1}
+          style={{ marginBottom: 30 }}
+        >
           <View
-            key={index}
             style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}
           >
-            <RestaurantImage image={resturant.image_url} />
-            <RestaurantInfo name={resturant.name} rating={resturant.rating} />
+            <RestaurantImage image={restaurant.image_url} />
+            <RestaurantInfo name={restaurant.name} rating={restaurant.rating} />
           </View>
-        ))}
-      </TouchableOpacity>
+        </TouchableOpacity>
+      ))}
     </>
   );
 }
